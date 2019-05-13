@@ -37,3 +37,39 @@ export function MyComponent() {
   );
 }
 ```
+
+## Make it reusable
+
+If you find yourself repeating this pattern, you could extract this functionality into a utility hook.
+
+```jsx
+// use-motion-value-state.ts
+import { useEffect, useState } from 'react'
+import { MotionValue } from 'framer'
+
+export function useMotionValueState(initialValue: number | string): [number | string, MotionValue] {
+  const value = useMotionValue(initialValue)
+  const [valueState, setValueState] = useState(value.get())
+
+  useEffect(() => value.onChange(setValueState)), [])
+
+  return [valueState, value]
+}
+```
+
+```jsx
+// MyComponent.tsx
+import * as React from "react";
+import { useMotionValueState } from "./use-motion-value-state";
+import { Frame, useMotionValue } from "framer";
+
+export function MyComponent() {
+  const [x, xMotionValue] = useMotionValueState(0);
+
+  return (
+    <Frame x={xMotionValue} animate={{ x: 100 }}>
+      {x}
+    </Frame>
+  );
+}
+```
