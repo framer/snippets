@@ -1,2 +1,3 @@
-# snippets
-Snippets and examples of popular patterns.
+# Snippets
+
+Examples of popular Framer Library patterns.
