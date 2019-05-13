@@ -47,7 +47,9 @@ If you find yourself repeating this pattern, you could extract this functionalit
 import { useEffect, useState } from 'react'
 import { MotionValue } from 'framer'
 
-export function useMotionValueState(initialValue: number | string): [number | string, MotionValue] {
+type MotionValueState = [number | string, MotionValue]
+
+export function useMotionValueState(initialValue: number | string): MotionValueState {
   const value = useMotionValue(initialValue)
   const [valueState, setValueState] = useState(value.get())
 
