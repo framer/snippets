@@ -44,6 +44,8 @@ function useDoubleTap(
 
 ```jsx
 // MyComponent.tsx
+import { useDoubleTap } from "./use-double-tap";
+
 export function MyComponent() {
   // Create a double tap/click version of your callback by providing it to
   // `useDoubleTap`. We could provide a different `timeout` as the second argument
