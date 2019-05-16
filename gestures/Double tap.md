@@ -4,6 +4,8 @@ Framer X and React don't currently have native support for the double click/tap 
 
 ## Make it reusable
 
+### The hook
+
 ```jsx
 // use-double-tap.ts
 import { useRef } from "react";
@@ -37,6 +39,8 @@ function useDoubleTap(
   };
 }
 ```
+
+### How to use in your component
 
 ```jsx
 // MyComponent.tsx
