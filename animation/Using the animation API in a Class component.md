@@ -44,7 +44,7 @@ export class MyComponent extends React.Component {
     const transformXToY = transform([0, 1], [0, 2], { clamp: false });
 
     // We can create a new `MotionValue` as a child of another with the
-    // `addChild` method.
+    // `addChild` method. This is usually abstracted by `useTransform`.
     this.y = this.x.addChild({ transformer: transformXToY });
   }
 
