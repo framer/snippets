@@ -8,9 +8,9 @@ Framer X and React don't currently have native support for the long press gestur
 
 ```jsx
 // use-long-press.ts
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
 
-function useLongPress(
+export function useLongPress(
   callback: (e: MouseEvent | TouchEvent) => void,
   duration: number = 500
 ) {
