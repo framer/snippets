@@ -64,6 +64,7 @@ export function useLongPress(
 
 ```jsx
 // MyComponent.tsx
+import { Frame } from "framer";
 import { useLongPress } from "./use-long-press";
 
 export function MyComponent() {
