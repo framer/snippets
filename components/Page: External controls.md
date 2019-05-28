@@ -195,7 +195,7 @@ export function createPageControls(options?: {
 
 ## Usage
 
-This file now exports a function called `createPageControls`. This function is used to create a special hook that can, in turn, be used to turn many different components into controls for the **same** `Page` component.
+This file now exports a function called `createPageControls`. This function is used to create a special hook that can be used to create overrides that in turn can turn design components into controls for the **same** `Page` component.
 
 ### Create page controls hook
 
