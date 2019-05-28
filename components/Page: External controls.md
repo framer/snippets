@@ -1,6 +1,6 @@
 # `Page`: Externally control `Page` components
 
-[Steve Ruiz](https://twitter.com/steveruizok) created some code that can be used to create overrides that turn normal components into controls for your `Page` component.
+[Steve Ruiz](https://twitter.com/steveruizok) created some code that can be used to create overrides that turn normal components into pagination controls and UI (page count, progess bar etc) for your `Page` component.
 
 ## The code
 
